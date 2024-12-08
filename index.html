@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishitha Mandala's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .project, .goal {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #roadmap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+
+        .dark-mode header,
+        .dark-mode footer {
+            background-color: #000;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rishitha Mandala</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#career-goals">Career Goals</a></li>
+                <li><a href="#leadership-philosophy">Leadership Philosophy</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#career-strategy">Career Strategy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Rishitha Mandala, a passionate IT management professional with a background in leading diverse teams on global IT projects. My experience has taught me the importance of cultural adaptability and effective communication in achieving project success.</p>
+        </section>
+
+        <section id="career-goals">
+            <h2>Career Goals</h2>
+            <div id="roadmap">
+                <div class="goal" data-detail="Complete Lean Six Sigma Certification.">
+                    <h3>Short-term Goal</h3>
+                    <p>Earn a certification in IT management within one year.</p>
+                </div>
+                <div class="goal" data-detail="Manage a team focused on innovation and inclusion.">
+                    <h3>Long-term Goal</h3>
+                    <p>Become a department manager within five years.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership-philosophy">
+            <h2>Leadership Philosophy</h2>
+            <p>My leadership philosophy is rooted in team learning and collaboration. I believe in fostering open communication and ensuring that every team member contributes to solutions. For example, I once resolved a conflict by encouraging team members to share their perspectives, leading to a more cohesive team dynamic.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>In this project, I utilized root cause analysis to identify inefficiencies, resulting in a 20% reduction in production time. Ethical considerations included ensuring data transparency throughout the team.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Implemented a feedback loop system that improved team communication and project outcomes. This project highlighted the importance of adaptability in a multicultural environment.</p>
+            </div>
+        </section>
+
+        <section id="career-strategy">
+            <h2>Career Strategy</h2>
+            <ul>
+                <li>Short-term Goal: Earn a certification in IT management within one year.</li>
+                <li>Long-term Goal: Become a department manager within five years.</li>
+                <li>Continuous Learning: Attend workshops, pursue mentorship, and read industry journals.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <p>&copy; 2024 Rishitha Mandala. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Interactive Roadmap
+        document.querySelectorAll('.goal').forEach(goal => {
+            goal.addEventListener('click', () => {
+                alert(goal.dataset.detail);
+            });
+        });
+
+        // Contact Form Validation
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Your message has been sent successfully!');
+        });
+    </script>
+</body>
+</html>
